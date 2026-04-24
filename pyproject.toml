@@ -1,0 +1,22 @@
+[project]
+name = "lantern"
+version = "0.1.0"
+description = "Lantern — render a markdown file as a slideshow in your terminal."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "rich>=13.7",
+    "pillow>=10.0",
+    "typer>=0.12",
+]
+
+[project.scripts]
+slide = "lantern.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lantern"]
